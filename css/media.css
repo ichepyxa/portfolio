@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+	.theme {
+		padding: 20px 0 30px !important;
+	}
+
+	.profile {
+		flex-direction: column;
+	}
+
+	.profile-img {
+		max-width: 100px;
+		height: 100px;
+	}
+
+	.profile-info__name {
+		font-size: 26px !important;
+		text-align: center;
+	}
+
+	.profile-info__typed {
+		word-wrap: wrap;
+	}
+}
