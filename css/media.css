@@ -20,4 +20,12 @@
 	.profile-info__typed {
 		word-wrap: wrap;
 	}
+
+	.tabs-btns {
+		flex-direction: column;
+	}
+
+	.tabs-content__portfolio {
+		grid-template-columns: 1fr !important;
+	}
 }
