@@ -2,6 +2,7 @@
 /* Common Styles */
 * {
 	--purple-color: #7996fc;
+	--orange-color: #faaf42;
 	box-sizing: border-box;
 }
 
@@ -97,6 +98,7 @@ img {
 	justify-content: center;
 	align-items: center;
 	gap: 40px;
+	padding: 0 20px;
 }
 
 .profile-img {
@@ -117,6 +119,15 @@ img {
 	box-shadow: 0 0 15px 1px var(--purple-color);
 }
 
+.profile-info__email {
+	width: fit-content;
+	text-decoration: none;
+}
+
+.profile-info__email:hover .profile-info__name {
+	color: var(--purple-color) !important;
+}
+
 .profile-info__name {
 	font-size: 46px;
 	color: var(--primary-text-color);
@@ -124,6 +135,7 @@ img {
 	margin-bottom: 15px;
 	font-weight: 700;
 	letter-spacing: 0.1px;
+	transition: all 0.3s ease;
 }
 
 .profile-info__typed {
@@ -211,19 +223,18 @@ img {
 }
 
 .cv-btn {
-	--cv-btn-color: #faaf42;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-basis: 260px;
-	background-color: var(--cv-btn-color);
+	background-color: var(--orange-color);
 	color: var(--primary-text-color);
 }
 
 .cv-btn:hover {
 	transform: scale(1.05);
 	background-color: #ff9a51;
-	box-shadow: 0 0 15px 1px var(--cv-btn-color);
+	box-shadow: 0 0 15px 1px var(--orange-color);
 }
 
 .cv-btn svg {

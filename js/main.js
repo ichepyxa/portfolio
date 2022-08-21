@@ -55,7 +55,6 @@ const tabsToggle = (tabsBtns, tabsContents) => {
 
 const initSkills = skills => {
 	skills.forEach(skill => {
-		console.log(skill.querySelector('.skills-item__percent'))
 		const progress = skill.querySelector('.skills-item__progress')
 		const percent = `${progress.dataset.percent}%`
 
