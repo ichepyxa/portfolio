@@ -302,7 +302,7 @@ img {
 }
 
 .portfolio-item:hover .portfolio-item__content {
-	transform: translateY(0);
+	opacity: 1;
 }
 
 .portfolio-item img {
@@ -323,7 +323,7 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transform: translateY(100%);
+	opacity: 0;
 }
 
 .portfolio-item__content h5 {
@@ -397,8 +397,14 @@ img {
 	text-align: center;
 }
 
-.copyright {
+.copyright,
+#ip {
 	color: var(--primary-text-color);
 	font-weight: 300;
 	font-size: 18px;
+	display: block;
+}
+
+#ip {
+	margin-top: 15px;
 }

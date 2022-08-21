@@ -260,10 +260,22 @@
 					<span class="copyright">
 						&copy; Maksim Saramudov. 2022 All rigths reserved
 					</span>
+					<span id="ip"></span>
 				</section>
 			</div>
 		</div>
 
+		<script type="text/javascript">
+			const getIP = json => {
+				document.getElementById('ip').innerText = json
+					? `Ваш IP: ${json.ip}`
+					: ''
+			}
+		</script>
+		<script
+			type="application/javascript"
+			src="https://api.ipify.org?format=jsonp&callback=getIP"
+		></script>
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 		<script src="./js/main.js"></script>
 	</body>
