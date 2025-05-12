@@ -112,7 +112,7 @@ img {
 }
 
 .profile-img img {
-	border-radius: 50%;
+	border-radius: 35px;
 	object-fit: cover;
 	padding: 5px;
 	border: 3px solid var(--purple-color);
@@ -261,6 +261,7 @@ img {
 	color: var(--primary-text-color);
 	background-color: transparent;
 	width: 100%;
+	transition: all 0.5s ease-in-out;
 }
 
 .tabs-btn:hover {
@@ -286,6 +287,22 @@ img {
 	}
 }
 
+@keyframes showTabs {
+	0% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes skills {
+	0%,
+	20% {
+		width: 0%;
+	}
+}
+
 .tabs-content {
 	display: none;
 }
@@ -294,6 +311,8 @@ img {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 32px;
+	animation: showTabs 1s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .portfolio-item {
@@ -342,6 +361,10 @@ img {
 
 .tabs-content__skills.active {
 	display: block;
+}
+
+.tabs-content__skills.active .skills-item__progress span {
+	animation: skills 1s ease-in-out;
 }
 
 .skills-items {
@@ -406,5 +429,6 @@ img {
 }
 
 #ip {
+	font-size: 14px;
 	margin-top: 15px;
 }

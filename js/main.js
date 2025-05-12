@@ -19,29 +19,29 @@ const swapTheme = rootElement => {
 const typedText = element => {
 	return new Typed(element, {
 		strings: [
-			'I am Full Stack Developer',
-			'I am 18 years old',
+			'I am programmer',
+			`I am ${Math.round(new Date().getFullYear() - 2004)} years old`,
 			'I am from Belarus',
 		],
-		typeSpeed: 100,
+		typeSpeed: 50,
 		loop: true,
 	})
 }
 
+const removeActiveClass = element => {
+	element.classList.remove('active')
+}
+
+const addActiveClass = element => {
+	element.classList.add('active')
+}
+
+const clearActiveTabs = (btns, contents) => {
+	btns.forEach(btn => removeActiveClass(btn))
+	contents.forEach(content => removeActiveClass(content))
+}
+
 const tabsToggle = (tabsBtns, tabsContents) => {
-	const removeActiveClass = element => {
-		element.classList.remove('active')
-	}
-
-	const addActiveClass = element => {
-		element.classList.add('active')
-	}
-
-	const clearActiveTabs = (btns, contents) => {
-		btns.forEach(btn => removeActiveClass(btn))
-		contents.forEach(content => removeActiveClass(content))
-	}
-
 	tabsBtns.forEach((btn, index) => {
 		btn.addEventListener('click', e => {
 			if (!e.target.classList.contains('active')) {
